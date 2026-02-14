@@ -1,4 +1,28 @@
+# ============================================================================
+# Python Dependencies for Lead Sync Backend
+# ============================================================================
+# This file lists all Python packages required to run the FastAPI backend.
+# Install all dependencies with: pip install -r requirements.txt
+# 
+# For production, consider pinning exact versions (==) to ensure consistency
+# across different environments.
+# ============================================================================
+
+# FastAPI - Modern, fast web framework for building APIs
+# Used for: Creating REST API endpoints, automatic API documentation
 fastapi==0.109.0
+
+# Uvicorn - Lightning-fast ASGI server
+# Used for: Running the FastAPI application in production
+# [standard] includes extra dependencies for better performance (websockets, httptools)
 uvicorn[standard]==0.27.0
+
+# Pydantic - Data validation using Python type hints
+# Used for: Request/response validation, data serialization
+# [email] adds email validation support for EmailStr type
 pydantic[email]==2.5.3
+
+# HTTPX - Modern async HTTP client
+# Used for: Making HTTP requests to external APIs (fetching leads, calling Ollama)
+# Supports both sync and async operations
 httpx==0.26.0
